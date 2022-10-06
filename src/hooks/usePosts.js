@@ -24,10 +24,11 @@ export const usePosts = () => {
 
     useEffect(() => {
         getPosts();
-        }, [counter])
+    }, [counter])
 
 
-    return {posts,
+    return {
+        posts,
         prevPage,
         nextPage,
         counter,

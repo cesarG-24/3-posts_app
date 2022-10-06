@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react'
 
-export const useUsers = (userId) => {
-    const [users, setUser] = useState({});
+export const useUser = (userId) => {
+    const [user, setUser] = useState({});
 
     const getUser = async () => {
         try {
@@ -20,5 +20,5 @@ export const useUsers = (userId) => {
         , [])
 
 
-    return users
+    return user
 }

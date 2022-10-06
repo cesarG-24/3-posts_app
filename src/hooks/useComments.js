@@ -4,17 +4,17 @@ export const useComments = (postId) => {
     const [comments, setComments] = useState([]);
 
     const getComments = async () => {
-     try {
-         const res = await fetch(`https://dummyjson.com/posts/${postId}/comments`);
-         const json = await res.json();
+        try {
+            const res = await fetch(`https://dummyjson.com/posts/${postId}/comments`);
+            const json = await res.json();
 
-         setComments(json.comments);
-     } catch (error) {
-         setComments([])
-     }
+            setComments(json.comments);
+        } catch (error) {
+            setComments([])
+        }
     }
 
-    useEffect(() =>{
+    useEffect(() => {
             getComments();
         }
         , [])

@@ -22,7 +22,7 @@ export const Comments = (props) => {
         <CommentsStyled {...rest}>
             {comments?.map((comment, index) =>
                 <div key={comment.id}>
-                    {index}:  {comment.body}
+                    {index}: {comment.body}
                 </div>)}
         </CommentsStyled>
     )

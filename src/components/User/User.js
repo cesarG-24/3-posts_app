@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {useUsers} from '../../hooks'
+import {useUser} from '../../hooks'
 
 const ContainerStyled = styled.div`
   display: flex;
@@ -9,7 +9,7 @@ const ContainerStyled = styled.div`
   //align-items: baseline;
   align-content: center;
   border-bottom: 1px solid #E0E0E0;
-justify-content: center;
+  justify-content: center;
   @media (max-width: 768px) {
     flex-direction: column;
     align-content: center;
@@ -26,7 +26,7 @@ const PreviewStyled = styled.img`
   object-fit: cover;
   object-position: center;
   box-shadow: -2px 1px 10px 1px #edf7fa;
-  
+
   @media (max-width: 768px) {
     max-width: fit-content;
     max-height: fit-content;
@@ -44,10 +44,10 @@ const NameStyled = styled.div`
   color: #21243D;
 `
 
-export const Users = (props) => {
+export const User = (props) => {
     const {userId, ...rest} = props;
 
-    const user = useUsers(userId);
+    const user = useUser(userId);
 
     return (
         <ContainerStyled key={user.id} {...rest}>

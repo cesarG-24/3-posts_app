@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {Comments} from "../Comments";
-import {Users} from "../Users";
+import {User} from "../User";
 
 const ContainerStyled = styled.div`
   display: flex;
@@ -9,7 +9,7 @@ const ContainerStyled = styled.div`
   padding: 20px;
   align-items: baseline;
   border-bottom: 1px solid #E0E0E0;
-  
+
   max-width: 900px;
   justify-content: space-around;
   align-content: center;
@@ -66,6 +66,7 @@ const SectionStyled = styled.div`
   color: #21243D;
 `
 
+
 export const Post = (props) => {
     const {post, ...rest} = props;
 
@@ -73,7 +74,7 @@ export const Post = (props) => {
         <ContainerStyled {...rest}>
 
             <LeftStyled>
-                <Users userId={post.userId}/>
+                <User userId={post.userId}/>
             </LeftStyled>
 
             <RightStyled>
@@ -81,7 +82,7 @@ export const Post = (props) => {
                 <BodyStyled>{post.body}</BodyStyled>
                 <SectionStyled>
                     <h3>Comments</h3>
-                    <Comments postId={post.id} />
+                    <Comments postId={post.id}/>
                 </SectionStyled>
             </RightStyled>
 
