@@ -13,3 +13,12 @@ This application consists of obtaining the API data and with this data create:
     * comments.
 - show 16 posts per page.
 - Use pagination.
+
+---
+
+<img align='left'  alt='CSS' width='40px' src='https://img.icons8.com/color/344/react-native.png'/>
+
+<br/>
+<br/>
+
+[CLICK HERE](https://react-app-ten-tau.vercel.app/posts)
