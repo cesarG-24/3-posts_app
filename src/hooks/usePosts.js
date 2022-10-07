@@ -4,7 +4,6 @@ export const usePosts = () => {
     const [posts, setPosts] = useState([]);
     const [counter, setCounter] = useState(0);
 
-
     const nextPage = () => {
         if (counter >= 9) return;
         setCounter((counter) => counter + 1);
@@ -15,11 +14,14 @@ export const usePosts = () => {
     }
 
     const getPosts = async () => {
-        const res = await fetch(`https://dummyjson.com/posts?limit=16&skip=${counter}`);
-        const json = await res.json();
-        const usersData = json.posts;
+        try {
+            const res = await fetch(`https://dummyjson.com/posts?limit=16&skip=${counter}`);
+            const json = await res.json();
 
-        setPosts(usersData);
+            setPosts(json.posts);
+        } catch (error) {
+            console.error(error)
+        }
     }
 
     useEffect(() => {

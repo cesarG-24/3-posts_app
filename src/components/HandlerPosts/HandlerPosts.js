@@ -40,6 +40,7 @@ const BtnStyled = styled.button`
 
 export const HandlerPosts = () => {
     const [search, setSearch] = useState('')
+
     const {posts, prevPage, nextPage, counter} = usePosts();
 
     const handleSearch = ({target}) => setSearch(target.value)
@@ -49,7 +50,6 @@ export const HandlerPosts = () => {
         || post.body.toLowerCase().includes(search.toLowerCase())
     )
 
-    
     return (
         <ContainerStyled>
             <input value={search} onChange={handleSearch} placeholder='Search'/>
@@ -67,7 +67,7 @@ export const HandlerPosts = () => {
             }
 
             <BtnContainerStyled>
-                <BtnStyled onClick={prevPage}>Back</BtnStyled>
+                <BtnStyled disabled={counter === 0} onClick={prevPage}>Back</BtnStyled>
                 <span>{counter}</span>
                 <BtnStyled onClick={nextPage}>Next</BtnStyled>
             </BtnContainerStyled>

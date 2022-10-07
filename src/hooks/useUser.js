@@ -15,10 +15,8 @@ export const useUser = (userId) => {
     }
 
     useEffect(() => {
-            getUser();
-        }
-        , [])
-
+        getUser();
+    }, [])
 
     return user
 }
