@@ -21,4 +21,4 @@ This application consists of obtaining the API data and with this data create:
 <br/>
 <br/>
 
-[CLICK HERE](https://react-app-ten-tau.vercel.app/posts)
+[ONLINE DEMO](https://react-app-ten-tau.vercel.app/posts)
